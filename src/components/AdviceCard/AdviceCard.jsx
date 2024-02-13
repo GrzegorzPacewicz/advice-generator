@@ -9,9 +9,13 @@ export function AdviceCard() {
   const [advice, setAdvice] = useState("");
 
   const getAdvice = async () => {
-    const response = await axios.get("https://api.adviceslip.com/advice");
-    const advice = await response.data.slip;
-    setAdvice(advice);
+    try {
+      const response = await axios.get("https://api.adviceslip.com/advice");
+      const adviceData = response.data.slip;
+      setAdvice(adviceData);
+    } catch (error) {
+      console.error("Error while fetching advice:", error);
+    }
   };
 
   useEffect(() => {
