@@ -71,8 +71,23 @@
 }
 
 .dice:hover {
-    box-shadow: 0px 0px 40px 0px rgba(83, 255, 169, 1);
+    box-shadow: 0px 0px 40px hsla(150, 100%, 66%, 0.5);
     scale: 1.2;
+    rotate: 45deg;
     transition: .2s ease-in;
 
 }
+
+/* .dice img {
+    animation: rotate 5s ease-in-out infinite alternate;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
